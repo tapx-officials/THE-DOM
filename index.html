@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
+
+  <meta
+    name="theme-color"
+    content="#050505"
+  >
+
+  <title>THE DOM — Experience Review</title>
+
+
+  <!-- =====================================================
+       GOOGLE FONTS
+  ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- =====================================================
+       YOUR CSS
+  ====================================================== -->
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       AMBIENT BACKGROUND
+  ====================================================== -->
+
+  <div class="ambient-bg">
+
+    <div class="ambient-glow glow-one"></div>
+
+    <div class="ambient-glow glow-two"></div>
+
+    <div class="ambient-glow glow-three"></div>
+
+    <div class="grain"></div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MAIN APP
+  ====================================================== -->
+
+  <main class="app">
+
+
+    <!-- ===================================================
+         BRAND HEADER
+    ==================================================== -->
+
+    <header class="brand-header">
+
+      <div>
+
+        <div class="brand-name">
+          THE <span class="dom-tilt">DOM</span>
+        </div>
+
+        <div class="brand-subtitle">
+          LOUNGE • DINE • BAR
+        </div>
+
+      </div>
+
+
+      <div class="brand-location">
+        PREMIUM DINING<br>
+        &amp; LOUNGE EXPERIENCE
+      </div>
+
+    </header>
+
+
+    <!-- ===================================================
+         PROGRESS
+    ==================================================== -->
+
+    <section class="progress-section">
+
+      <div class="progress-track">
+
+        <div
+          class="progress-active"
+          id="progressActive"
+        ></div>
+
+      </div>
+
+
+      <div class="steps">
+
+
+        <!-- STEP 1 -->
+
+        <div
+          class="step active"
+          id="step1"
+        >
+
+          <div class="step-circle">
+
+            <span class="number">
+              1
+            </span>
+
+            <span class="check">
+              ✓
+            </span>
+
+          </div>
+
+          <div class="step-text">
+            EXPERIENCE
+          </div>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div
+          class="step"
+          id="step2"
+        >
+
+          <div class="step-circle">
+
+            <span class="number">
+              2
+            </span>
+
+            <span class="check">
+              ✓
+            </span>
+
+          </div>
+
+          <div class="step-text">
+            RATE
+          </div>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div
+          class="step"
+          id="step3"
+        >
+
+          <div class="step-circle">
+
+            <span class="number">
+              3
+            </span>
+
+            <span class="check">
+              ✓
+            </span>
+
+          </div>
+
+          <div class="step-text">
+            REVIEW
+          </div>
+
+        </div>
+
+
+        <!-- STEP 4 -->
+
+        <div
+          class="step"
+          id="step4"
+        >
+
+          <div class="step-circle">
+
+            <span class="number">
+              4
+            </span>
+
+            <span class="check">
+              ✓
+            </span>
+
+          </div>
+
+          <div class="step-text">
+            POST
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         SCREENS
+    ==================================================== -->
+
+    <div class="screens">
+
+
+      <!-- =================================================
+           SCREEN 1 — EXPERIENCE
+      ================================================== -->
+
+      <section
+        class="screen active"
+        id="experienceScreen"
+      >
+
+        <div class="screen-content">
+
+
+          <div class="eyebrow">
+
+            <span></span>
+
+            YOUR EXPERIENCE
+
+          </div>
+
+
+          <h1 class="hero-heading">
+
+            What made your
+            <em>visit</em> memorable?
+
+          </h1>
+
+
+          <p class="hero-copy">
+
+            Tell us what stood out during your
+            experience. Pick as many as you like.
+
+          </p>
+
+
+          <!-- SELECT HEADER -->
+
+          <div class="select-header">
+
+            <span>
+              SELECT HIGHLIGHTS
+            </span>
+
+            <b id="selectedCount">
+              0 SELECTED
+            </b>
+
+          </div>
+
+
+          <!-- EXPERIENCE OPTIONS -->
+
+          <div
+            class="experience-grid"
+            id="experienceGrid"
+          >
+
+
+<!-- FOOD -->
+
+            <button
+              type="button"
+              class="experience-card"
+              data-option="Food"
+            >
+
+              <div class="experience-icon">
+                🍽️
+              </div>
+
+              <div class="experience-info">
+
+                <strong>
+                  Food
+                </strong>
+
+                <span>
+                  Taste &amp; presentation
+                </span>
+
+              </div>
+
+              <div class="option-check">
+                ✓
+              </div>
+
+            </button>
+
+
+            <!-- DRINKS -->
+
+            <button
+              type="button"
+              class="experience-card"
+              data-option="Drinks"
+            >
+
+              <div class="experience-icon">
+                🍸
+              </div>
+
+              <div class="experience-info">
+
+                <strong>
+                  Drinks
+                </strong>
+
+                <span>
+                  Cocktails &amp; beverages
+                </span>
+
+              </div>
+
+              <div class="option-check">
+                ✓
+              </div>
+
+            </button>
+
+
+            <!-- AMBIENCE -->
+
+            <button
+              type="button"
+              class="experience-card"
+              data-option="Ambience"
+            >
+
+              <div class="experience-icon">
+                ✨
+              </div>
+
+              <div class="experience-info">
+
+                <strong>
+                  Ambience
+                </strong>
+
+                <span>
+                  Setting &amp; atmosphere
+                </span>
+
+              </div>
+
+              <div class="option-check">
+                ✓
+              </div>
+
+            </button>
+
+
+            <!-- MUSIC -->
+
+            <button
+              type="button"
+              class="experience-card"
+              data-option="Music"
+            >
+
+              <div class="experience-icon">
+                🎶
+              </div>
+
+              <div class="experience-info">
+
+                <strong>
+                  Music
+                </strong>
+
+                <span>
+                  Sound &amp; energy
+                </span>
+
+              </div>
+
+              <div class="option-check">
+                ✓
+              </div>
+
+            </button>
+
+
+            <!-- SERVICE -->
+
+            <button
+              type="button"
+              class="experience-card"
+              data-option="Service"
+            >
+
+              <div class="experience-icon">
+                🤝
+              </div>
+
+              <div class="experience-info">
+
+                <strong>
+                  Service
+                </strong>
+
+                <span>
+                  Attention &amp; hospitality
+                </span>
+
+              </div>
+
+              <div class="option-check">
+                ✓
+              </div>
+
+            </button>
+
+
+            <!-- STAFF -->
+
+            <button
+              type="button"
+              class="experience-card"
+              data-option="Staff"
+            >
+
+              <div class="experience-icon">
+                👋
+              </div>
+
+              <div class="experience-info">
+
+                <strong>
+                  Staff
+                </strong>
+
+                <span>
+                  Warmth &amp; professionalism
+                </span>
+
+              </div>
+
+              <div class="option-check">
+                ✓
+              </div>
+
+            </button>
+
+
+            <!-- VIBE -->
+
+            <button
+              type="button"
+              class="experience-card"
+              data-option="Vibe"
+            >
+
+              <div class="experience-icon">
+                🔥
+              </div>
+
+              <div class="experience-info">
+
+                <strong>
+                  Vibe
+                </strong>
+
+                <span>
+                  Energy &amp; atmosphere
+                </span>
+
+              </div>
+
+              <div class="option-check">
+                ✓
+              </div>
+
+            </button>
+
+
+            <!-- ROOFTOP -->
+
+            <button
+              type="button"
+              class="experience-card"
+              data-option="Rooftop"
+            >
+
+              <div class="experience-icon">
+                🌃
+              </div>
+
+              <div class="experience-info">
+
+                <strong>
+                  Rooftop
+                </strong>
+
+                <span>
+                  The view &amp; setting
+                </span>
+
+              </div>
+
+              <div class="option-check">
+                ✓
+              </div>
+
+            </button>
+
+
+          </div>
+
+
+          <!-- SELECTION STATUS -->
+
+          <div
+            class="selection-status"
+            id="selectionStatus"
+          >
+
+            <span class="status-dot"></span>
+
+            <span id="selectionText">
+              Select what stood out to you
+            </span>
+
+          </div>
+
+
+          <!-- NEXT BUTTON -->
+
+          <button
+            type="button"
+            class="main-button"
+            id="experienceNext"
+            disabled
+          >
+
+            <span>
+              CONTINUE TO RATE
+            </span>
+
+            <span>
+              →
+            </span>
+
+          </button>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =================================================
+           SCREEN 2 — RATINGS
+      ================================================== -->
+
+      <section
+        class="screen"
+        id="ratingScreen"
+      >
+
+        <div class="screen-content">
+
+
+          <div class="eyebrow">
+
+            <span></span>
+
+            RATE YOUR HIGHLIGHTS
+
+          </div>
+
+
+          <h2 class="section-heading">
+
+            How was your
+            <em>experience?</em>
+
+          </h2>
+
+
+          <p class="section-copy">
+
+            Rate each highlight honestly.
+            We'll use your choices to shape your review.
+
+          </p>
+
+
+          <!-- GENERATED RATING CARDS -->
+
+          <div
+            class="experience-ratings"
+            id="experienceRatings"
+          ></div>
+
+
+          <!-- CREATE REVIEW -->
+
+          <button
+            type="button"
+            class="main-button"
+            id="createReviewButton"
+            disabled
+          >
+
+            <span>
+              CREATE MY REVIEW
+            </span>
+
+            <span>
+              ✦
+            </span>
+
+          </button>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =================================================
+           SCREEN 3 — LOADING
+      ================================================== -->
+
+      <section
+        class="screen"
+        id="loadingScreen"
+      >
+
+        <div class="loading-screen">
+
+
+          <div class="loading-content">
+
+
+            <!-- ORB -->
+
+            <div class="loading-orb">
+
+              <div class="ring-one"></div>
+
+              <div class="ring-two"></div>
+
+              <div class="orb-core">
+                ✦
+              </div>
+
+            </div>
+
+
+            <!-- BRAND -->
+
+            <div class="loading-brand">
+
+              THE <span>DOM</span>
+
+            </div>
+
+
+            <!-- HEADING -->
+
+            <h2>
+
+              Crafting your
+              <em>review</em>
+
+            </h2>
+
+
+            <!-- MESSAGE -->
+
+            <p id="loadingMessage">
+              Understanding your experience...
+            </p>
+
+
+            <!-- LOADING BAR -->
+
+            <div class="loading-bar">
+
+              <div
+                id="loadingProgress"
+              ></div>
+
+            </div>
+
+
+            <!-- PERCENT -->
+
+            <div
+              class="loading-percent"
+              id="loadingPercent"
+            >
+              0%
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =================================================
+           SCREEN 4 — GENERATED REVIEW
+      ================================================== -->
+
+      <section
+        class="screen"
+        id="reviewScreen"
+      >
+
+        <div class="screen-content">
+
+
+          <div class="eyebrow">
+
+            <span></span>
+
+            YOUR AI REVIEW
+
+          </div>
+
+
+          <h2 class="section-heading">
+
+            Ready to
+            <em>share.</em>
+
+          </h2>
+
+
+          <p class="section-copy">
+
+            Your experience has been turned into
+            a natural review. Copy it and choose
+            where you'd like to post it.
+
+          </p>
+
+
+          <!-- GENERATED REVIEW CARD -->
+
+          <div class="generated-review-card">
+
+
+            <div class="review-card-top">
+
+              <span class="ai-label">
+                AI • PERSONALIZED
+              </span>
+
+              <span class="edit-label">
+                YOUR EXPERIENCE
+              </span>
+
+            </div>
+
+
+            <!-- STARS -->
+
+            <div
+              class="review-stars"
+              id="reviewStars"
+            >
+              ★★★★★
+            </div>
+
+
+            <!-- REVIEW -->
+
+            <div
+              class="generated-review"
+              id="generatedReview"
+            >
+              Your review is being prepared...
+            </div>
+
+
+            <!-- CARD BOTTOM -->
+
+            <div class="review-card-bottom">
+
+              <span>
+                GENERATED FROM YOUR HIGHLIGHTS
+              </span>
+
+              <span>
+                THE DOM
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+          <!-- COPY BUTTON -->
+
+          <button
+            type="button"
+            class="copy-button"
+            id="copyReviewButton"
+          >
+
+            <span class="copy-icon">
+              ⧉
+            </span>
+
+            <span>
+              COPY REVIEW &amp; CONTINUE
+            </span>
+
+            <span>
+              →
+            </span>
+
+          </button>
+
+
+          <!-- COPY MESSAGE -->
+
+          <div
+            class="copy-message"
+            id="copyMessage"
+          >
+
+            <span>
+              ✓
+            </span>
+
+            Review copied successfully
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =================================================
+           SCREEN 5 — PLATFORM
+      ================================================== -->
+
+      <section
+        class="screen"
+        id="platformScreen"
+      >
+
+        <div class="screen-content">
+
+
+          <div class="eyebrow">
+
+            <span></span>
+
+            CHOOSE WHERE TO POST
+
+          </div>
+
+
+          <h2 class="section-heading">
+
+            Share your
+            <em>experience.</em>
+
+          </h2>
+
+
+          <p class="section-copy">
+
+            Choose a platform below.
+            Your review is already copied and ready to paste.
+
+          </p>
+
+
+          <!-- PLATFORM LIST -->
+
+          <div
+            class="platform-list"
+            id="platformList"
+          >
+
+
+            <!-- =================================================
+                 SWIGGY
+            ================================================== -->
+
+            <button
+              type="button"
+              class="platform-row"
+              id="swiggyButton"
+            >
+
+              <div class="platform-logo-wrap">
+
+                <img
+                  class="platform-logo-img"
+                  src="swiggy.png"                  alt="Swiggy"
+                  loading="lazy"
+                >
+
+              </div>
+
+
+              <div class="platform-row-info">
+
+                <strong>
+                  Swiggy
+                </strong>
+
+                <span>
+                  Share your experience on Swiggy
+                </span>
+
+              </div>
+
+
+              <div class="platform-arrow">
+                →
+              </div>
+
+            </button>
+
+
+
+            <!-- =================================================
+                 ZOMATO
+            ================================================== -->
+
+            <button
+              type="button"
+              class="platform-row"
+              id="zomatoButton"
+            >
+
+              <div class="platform-logo-wrap">
+
+                <img
+                  class="platform-logo-img"
+                  src="zomato.png"
+                  alt="Zomato"
+                  loading="lazy"
+                >
+
+              </div>
+
+
+              <div class="platform-row-info">
+
+                <strong>
+                  Zomato
+                </strong>
+
+                <span>
+                  Share your experience on Zomato
+                </span>
+
+              </div>
+
+
+              <div class="platform-arrow">
+                →
+              </div>
+
+            </button>
+
+
+
+            <!-- =================================================
+                 DISTRICT
+            ================================================== -->
+
+            <button
+              type="button"
+              class="platform-row"
+              id="districtButton"
+            >
+
+              <div class="platform-logo-wrap">
+
+                <img
+                  class="platform-logo-img"
+                  src="district.png"
+                  alt="District"
+                  loading="lazy"
+                >
+
+              </div>
+
+
+              <div class="platform-row-info">
+
+                <strong>
+                  District
+                </strong>
+
+                <span>
+                  Share your experience on District
+                </span>
+
+              </div>
+
+
+              <div class="platform-arrow">
+                →
+              </div>
+
+            </button>
+
+
+
+            <!-- =================================================
+                 GOOGLE
+            ================================================== -->
+
+            <button
+              type="button"
+              class="platform-row"
+              id="googleButton"
+            >
+
+              <div class="platform-logo-wrap">
+
+                <img
+                  class="platform-logo-img"
+                  src="google.png"
+                  alt="Google"
+                  loading="lazy"
+                >
+
+              </div>
+
+
+              <div class="platform-row-info">
+
+                <strong>
+                  Google
+                </strong>
+
+                <span>
+                  Post your review on Google
+                </span>
+
+              </div>
+
+
+              <div class="platform-arrow">
+                →
+              </div>
+
+            </button>
+
+
+          </div>
+
+
+          <!-- =================================================
+               PASTE NOTE
+          ================================================== -->
+
+          <div class="paste-note">
+
+
+            <div class="paste-note-icon">
+              ⧉
+            </div>
+
+
+            <div>
+
+              <strong>
+                YOUR REVIEW IS COPIED
+              </strong>
+
+              <span>
+                Open a platform above and paste your review.
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+    </div>
+
+
+
+    <!-- ===================================================
+         FOOTER
+    ==================================================== -->
+
+    <footer class="footer">
+
+      <span>
+        POWERED BY
+      </span>
+
+      <b>
+        THE DOM EXPERIENCE
+      </b>
+
+      <span>
+        •
+      </span>
+
+      <span>
+        AI REVIEW SYSTEM
+      </span>
+
+    </footer>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       TOAST
+  ====================================================== -->
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  >
+
+    <i>
+      ✦
+    </i>
+
+    <span id="toastText">
+      Something happened
+    </span>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>
