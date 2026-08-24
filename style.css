@@ -2902,3 +2902,270 @@ button:focus-visible {
     none;
 
 }
+
+
+/* =========================================================
+   PLATFORM SCREEN — FINAL SPACING + SCROLL FIX
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   PLATFORM SCREEN
+   --------------------------------------------------------- */
+
+#platformScreen {
+
+  height: 100%;
+
+  min-height: 0;
+
+  overflow: hidden;
+
+}
+
+
+#platformScreen .screen-content {
+
+  height: 100%;
+
+  min-height: 0;
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding-bottom: 16px;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+
+  overscroll-behavior: contain;
+
+}
+
+
+#platformScreen .screen-content::-webkit-scrollbar {
+
+  display: none;
+
+}
+
+
+/* ---------------------------------------------------------
+   PLATFORM LIST
+   --------------------------------------------------------- */
+
+#platformScreen .platform-list {
+
+  flex: none;
+
+  min-height: auto;
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  margin-top: 20px;
+
+  overflow: visible;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+
+}
+
+
+#platformScreen .platform-list::-webkit-scrollbar {
+
+  display: none;
+
+}
+
+
+/* ---------------------------------------------------------
+   NORMAL PLATFORM CARDS
+   Google / Zomato / Swiggy
+   --------------------------------------------------------- */
+
+#platformScreen .platform-row {
+
+  flex-shrink: 0;
+
+  width: 100%;
+
+  margin: 0 !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   SOCIAL DIVIDER
+   OUR SOCIAL
+   --------------------------------------------------------- */
+
+#platformScreen .socials-divider {
+
+  flex-shrink: 0;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin:
+
+    14px 2px 4px;
+
+  color:
+
+    #5d544b;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: .20em;
+
+}
+
+
+#platformScreen .socials-divider::before,
+#platformScreen .socials-divider::after {
+
+  content: "";
+
+  flex: 1;
+
+  min-width: 0;
+
+  height: 1px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.09),
+      transparent
+    );
+
+}
+
+
+#platformScreen .socials-divider span {
+
+  flex-shrink: 0;
+
+  white-space: nowrap;
+
+}
+
+
+/* ---------------------------------------------------------
+   EXTRA SPACE BEFORE OUR SOCIAL
+   This creates the open / premium feeling
+   --------------------------------------------------------- */
+
+#platformScreen .platform-row + .socials-divider {
+
+  margin-top: 18px;
+
+}
+
+
+/* ---------------------------------------------------------
+   INSTAGRAM
+   --------------------------------------------------------- */
+
+#platformScreen .socials-divider + .platform-row {
+
+  margin-top: 4px !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   FACEBOOK
+   Instagram → Facebook spacing
+   Same visual rhythm as Zomato → Swiggy
+   --------------------------------------------------------- */
+
+#platformScreen .socials-divider + .platform-row + .platform-row {
+
+  margin-top: 14px !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   PASTE NOTE
+   --------------------------------------------------------- */
+
+#platformScreen .paste-note {
+
+  flex-shrink: 0;
+
+  margin-top: 14px;
+
+  margin-bottom: 4px;
+
+}
+
+
+/* =========================================================
+   FINAL PLATFORM SPACING — MOBILE
+   ========================================================= */
+
+@media (max-width:390px) {
+
+  #platformScreen .platform-list {
+
+    gap: 12px;
+
+  }
+
+
+  #platformScreen .socials-divider {
+
+    gap: 10px;
+
+    margin-top: 16px;
+
+    margin-bottom: 3px;
+
+  }
+
+
+  #platformScreen .platform-row + .socials-divider {
+
+    margin-top: 16px;
+
+  }
+
+
+  #platformScreen .socials-divider + .platform-row {
+
+    margin-top: 3px !important;
+
+  }
+
+
+  #platformScreen .socials-divider + .platform-row + .platform-row {
+
+    margin-top: 12px !important;
+
+  }
+
+}
