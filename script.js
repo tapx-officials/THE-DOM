@@ -11,7 +11,7 @@
 const PLATFORM_LINKS = {
 
   swiggy:
-    " https://swiggy.onelink.me/BVRZ?af_dp=swiggydiners%3A%2F%2Fdetails%2F719877%3Fsource%3Dsharing Happy dining!",
+    "https://swiggy.onelink.me/BVRZ?af_dp=swiggydiners%3A%2F%2Fdetails%2F719877%3Fsource%3Dsharing%20Happy%20dining!",
 
   zomato:
     "https://zomato.onelink.me/xqzv/czjn9w2o",
@@ -20,7 +20,13 @@ const PLATFORM_LINKS = {
     "https://link.district.in/DSTRKT/o7dmfgbx",
 
   google:
-    "https://search.google.com/local/writereview?placeid=ChIJPRWWqFcDDTkRoikpMPDLVos"
+    "https://search.google.com/local/writereview?placeid=ChIJPRWWqFcDDTkRoikpMPDLVos",
+
+  instagram:
+    "https://www.instagram.com/thedom_loungedineandbar?igsi=eGdxYWloaWZxMDd2",
+
+  facebook:
+    "https://www.facebook.com/share/1MQGKeBsR9/"
 
 };
 
@@ -2203,6 +2209,18 @@ function setupPlatformButtons() {
   setupPlatformButton(
     "googleButton",
     "google"
+  );
+
+
+  setupPlatformButton(
+    "instagramButton",
+    "instagram"
+  );
+
+
+  setupPlatformButton(
+    "facebookButton",
+    "facebook"
   );
 
 }
